@@ -117,6 +117,11 @@
 
   @media(max-width:720px){section{padding:56px 0}}
   @media (prefers-reduced-motion:reduce){.mark-word .stop::before{animation:none}html{scroll-behavior:auto}}
+
+  .banner{border-radius:14px;overflow:hidden;margin:26px 0 6px;border:1px solid var(--line)}
+  .banner img{width:100%;display:block;aspect-ratio:16/7;object-fit:cover}
+  .dark-band .banner{border-color:var(--line-dark)}
+
 </style>
 </head>
 <body>
@@ -148,6 +153,7 @@
     <p class="eyebrow">Chapter one</p>
     <h2>Your blood: the long-term record.</h2>
     <p class="lead">Blood doesn't describe how you feel today — it describes how the last few months and years have actually gone. One draw, twenty-plus measurements.</p>
+    <div class="banner"><img src="images/banner-blood.jpg" alt="Red blood cells flowing through a vessel, macro illustration" loading="lazy"></div>
 
     <h3>Heart and metabolism</h3>
     <div class="marker"><h4>Full cholesterol profile <span>lipids</span></h4><p>Total, HDL, LDL, non-HDL and triglycerides. High cholesterol has no symptoms — it's found, or it's missed. These numbers drive most heart-risk decisions.</p></div>
@@ -176,6 +182,7 @@
     <p class="eyebrow">Chapter two</p>
     <h2>Your skin: the visible record.</h2>
     <p class="lead">Skin cancer is one of the most treatable cancers when caught early — and one of the most serious when caught late. The difference is usually just whether anyone was looking.</p>
+    <div class="banner"><img src="images/banner-skin.jpg" alt="Macro of healthy skin texture with a single small mole" loading="lazy"></div>
     <ol class="steps">
       <li><strong>Full-body imaging.</strong> Medical-grade cameras photograph your skin systematically — including your back, scalp line and everywhere you can't see yourself.</li>
       <li><strong>AI review of every lesion.</strong> Certified dermatology software assesses each mole against the patterns that matter — asymmetry, border, colour, size — and flags anything that deserves attention.</li>
@@ -191,6 +198,7 @@
     <p class="eyebrow">Chapter three</p>
     <h2>Your oral microbiome: the early record.</h2>
     <p class="lead">Your mouth hosts a living ecosystem of bacteria — and its balance is one of the earliest readable signals of what's happening in the rest of your body. It's also the one other health checks skip.</p>
+    <div class="banner"><img src="images/banner-oral.jpg" alt="Golden microbial colonies against deep blue, microscopy aesthetic" loading="lazy"></div>
 
     <div class="marker"><h4>Gum health scoring <span>periodontal screen</span></h4><p>Pocket depths and bleeding index — the clinical measure of gum inflammation. Periodontal disease is consistently associated with higher cardiovascular risk, and gum health tracks tightly with blood sugar control.</p></div>
     <div class="marker"><h4>Salivary sampling <span>inflammation signals</span></h4><p>Saliva carries measurable markers of inflammation and microbial balance. Read alongside your blood hs-CRP, it helps build the inflammation picture from two directions.</p></div>
@@ -205,10 +213,11 @@
   <div class="wrap">
     <p class="eyebrow">Afterwards</p>
     <h2>Your results: one report, three actions.</h2>
+    <div class="banner"><img src="images/phone.jpg" alt="Hands holding a phone showing a single amber signal on a dark screen, at a kitchen table in evening light" loading="lazy"></div>
     <ol class="steps">
       <li><strong>Same visit:</strong> your clinician reviews skin, oral and vitals findings with you in person.</li>
       <li><strong>Within the week:</strong> blood results explained in plain English — every marker with a green, amber or red status and what it means.</li>
-      <li><strong>The Sango Report:</strong> one document, ending with your three priority actions. Never thirty.</li>
+      <li><strong>The Sango Report:</strong> one document with your Sango Signal — every marker’s status and, from year two, what moved — ending with your three priority actions. Never thirty.</li>
       <li><strong>If anything needs care:</strong> the referral is arranged and the letter your GP or specialist needs is written for you.</li>
     </ol>
   </div>

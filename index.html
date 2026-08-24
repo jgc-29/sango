@@ -17,7 +17,7 @@
 <meta property="og:url" content="https://www.sangohealth.co.uk/">
 <meta property="og:site_name" content="Sango Health">
 <meta property="og:locale" content="en_GB">
-<meta property="og:image" content="https://www.sangohealth.co.uk/og-cover.jpg">
+<meta property="og:image" content="https://www.sangohealth.co.uk/images/report.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -91,7 +91,9 @@
       radial-gradient(70% 60% at 70% 20%, rgba(233,162,59,.18), transparent 60%),
       linear-gradient(165deg,#22344F,#101D31 70%);border:1px solid var(--line-dark)}
   .ph::after{content:attr(data-shot);position:absolute;left:14px;bottom:12px;font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(218,228,241,.55)}
-  .ph .ph-dot{position:absolute;top:18px;right:18px;width:10px;height:10px;border-radius:50%;background:var(--amber)}
+  .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+  .ph::after{z-index:2;text-shadow:0 1px 8px rgba(12,22,38,.8)}
+  .ph .ph-dot{z-index:2;position:absolute;top:18px;right:18px;width:10px;height:10px;border-radius:50%;background:var(--amber)}
   .ph .ph-dot::before{content:"";position:absolute;inset:0;border-radius:50%;border:1.5px solid var(--amber);animation:ripple 3.6s ease-out infinite}
   @keyframes ripple{0%{transform:scale(1);opacity:.65}100%{transform:scale(4.4);opacity:0}}
 
@@ -117,9 +119,12 @@
   }
 
   .hero{background:
-      radial-gradient(60% 50% at 78% 10%, rgba(233,162,59,.10), transparent 60%),
-      linear-gradient(178deg,var(--night) 0%,var(--dusk) 80%,#1A2F4E 100%);
-    color:#EAF0F8;min-height:86vh;display:flex;flex-direction:column;justify-content:center;padding:60px 0 0;overflow:hidden}
+      linear-gradient(96deg, rgba(12,22,38,.97) 28%, rgba(12,22,38,.78) 55%, rgba(12,22,38,.38) 100%),
+      url('images/skin.jpg') right 20%/cover no-repeat, var(--night);
+    color:#EAF0F8;min-height:88vh;display:flex;flex-direction:column;justify-content:center;padding:60px 0 0;overflow:hidden}
+  @media(max-width:760px){.hero{background:
+      linear-gradient(180deg, rgba(12,22,38,.92) 30%, rgba(12,22,38,.72)),
+      url('images/skin.jpg') center 15%/cover no-repeat, var(--night)}}
   .hero .eyebrow{color:var(--amber)}
   .hero h1{font-family:var(--disp);font-weight:600;font-size:clamp(2.7rem,8vw,4.8rem);letter-spacing:-.028em;line-height:1.04;max-width:14ch;margin-top:16px;text-wrap:balance}
   .hero h1 em{font-style:normal;color:var(--amber)}
@@ -213,6 +218,57 @@
     .tier:hover{transform:none}
     html{scroll-behavior:auto}
   }
+
+  /* --- vNext visual system --- */
+  .ph img{transition:transform .6s ease}
+  .ph:hover img{transform:scale(1.04)}
+
+  /* stat band */
+  .numbers{background:linear-gradient(rgba(16,29,49,.88),rgba(12,22,38,.93)), url('images/sea.jpg') center/cover no-repeat;color:#EAF0F8;border-top:1px solid var(--line-dark);border-bottom:1px solid var(--line-dark)}
+  .numbers .eyebrow{color:var(--amber)}
+  .numbers h2{color:#EAF0F8}
+  .num-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;margin-top:34px}
+  .num .big{font-family:var(--mono);font-weight:400;font-size:clamp(3.4rem,10vw,5.8rem);line-height:1;letter-spacing:-.02em}
+  .num.amber .big{color:var(--amber)}
+  .num p{color:#A3B5CD;margin-top:12px;max-width:26ch;font-size:.98rem}
+  @media(max-width:640px){.num-grid{grid-template-columns:1fr;gap:30px}}
+
+  /* image-chip list */
+  .chips{list-style:none;margin-top:28px;max-width:640px}
+  .chips li{display:flex;gap:16px;align-items:center;padding:13px 0;border-top:1px solid var(--line-dark)}
+  .chip-img{width:64px;height:64px;border-radius:12px;overflow:hidden;flex:none;background:var(--panel);border:1px solid var(--line-dark)}
+  .chip-img img{width:100%;height:100%;object-fit:cover;display:block}
+  .chips b{display:block;color:#fff;font-weight:600;font-size:.98rem}
+  .chips span{font-size:.87rem;color:#A9BAD2}
+
+  /* mission full-bleed */
+  .mission{position:relative;background:url('images/coral.jpg') center/cover no-repeat;color:#EAF0F8;padding:150px 0}
+  .mission::before{content:"";position:absolute;inset:0;background:linear-gradient(92deg,rgba(12,22,38,.92) 20%,rgba(12,22,38,.55) 70%,rgba(12,22,38,.35))}
+  .mission .wrap{position:relative}
+  .mission .eyebrow{color:var(--amber)}
+  .mission h2{color:#EAF0F8;font-size:clamp(2rem,5.6vw,3.3rem);max-width:14ch}
+  .mission p{color:#C9D5E6;max-width:46ch;margin-top:14px;font-size:1.05rem}
+
+  /* photo-backed final CTA */
+  .final{position:relative;background:url('images/consult.jpg') center 30%/cover no-repeat}
+  .final::before{content:"";position:absolute;inset:0;background:linear-gradient(178deg,rgba(20,36,59,.9),rgba(12,22,38,.94))}
+  .final .wrap{position:relative}
+
+
+  /* clinic gallery */
+  .gallery-sec{background:var(--paper)}
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:36px}
+  .gtile{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:4/5;border:1px solid var(--line)}
+  .gtile img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+  .gtile:hover img{transform:scale(1.05)}
+  .gtile::after{content:attr(data-label);position:absolute;left:12px;top:12px;font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:#fff;text-shadow:0 1px 8px rgba(12,22,38,.85);z-index:2}
+  @media(max-width:760px){.gallery{grid-template-columns:repeat(2,1fr)}}
+
+  /* report image in signal band */
+  .report-visual{position:relative;border-radius:16px;overflow:hidden;margin-top:40px;border:1px solid var(--line)}
+  .report-visual img{width:100%;display:block;aspect-ratio:21/9;object-fit:cover}
+  .report-visual::after{content:"the sango report · one document · three actions";position:absolute;left:16px;bottom:12px;font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:#fff;text-shadow:0 1px 8px rgba(12,22,38,.85)}
+
 </style>
 </head>
 <body>
@@ -255,6 +311,20 @@
   </div>
 </header>
 
+
+<!-- NUMBERS -->
+<section class="numbers">
+  <div class="wrap reveal">
+    <p class="eyebrow">Healthcare today, in numbers</p>
+    <h2>Almost everything is spent after it's too late.</h2>
+    <div class="num-grid">
+      <div class="num"><div class="big">~80%</div><p>of healthcare budgets go to managing chronic disease once it's arrived.</p></div>
+      <div class="num amber"><div class="big">&lt;1%</div><p>is spent on catching it early — the moment when it's cheapest and easiest to change.</p></div>
+    </div>
+    <p style="margin-top:30px;color:#A3B5CD;max-width:44ch">Sango exists for that gap.</p>
+  </div>
+</section>
+
 <section class="chapters" id="chapters">
   <div class="wrap reveal">
     <p class="eyebrow">What we read</p>
@@ -268,7 +338,7 @@
     </div>
 
     <div class="tabpane active" id="pane-blood" role="tabpanel" aria-labelledby="tab-blood">
-      <div class="ph" data-shot="Photo: blood draw, warm lamp light"><span class="ph-dot" aria-hidden="true"></span></div>
+      <div class="ph" data-shot="one draw · twenty-plus measurements"><img src="images/blood.jpg" alt="Blood sample vial held under warm lamp light with dusk skyline behind" loading="lazy"><span class="ph-dot" aria-hidden="true"></span></div>
       <div>
         <p class="stat">20+ measurements · one draw</p>
         <h3>What your blood remembers</h3>
@@ -278,7 +348,7 @@
     </div>
 
     <div class="tabpane" id="pane-skin" role="tabpanel" aria-labelledby="tab-skin" hidden>
-      <div class="ph" data-shot="Photo: skin close-up, soft green wall"><span class="ph-dot" aria-hidden="true"></span></div>
+      <div class="ph" data-shot="ai flags · a clinician decides"><img src="images/skin.jpg" alt="Shoulder and back with natural moles highlighted by AI detection frames" loading="lazy"><span class="ph-dot" aria-hidden="true"></span></div>
       <div>
         <p class="stat">Every mole · mapped and tracked</p>
         <h3>What your skin shows</h3>
@@ -288,7 +358,7 @@
     </div>
 
     <div class="tabpane" id="pane-oral" role="tabpanel" aria-labelledby="tab-oral" hidden>
-      <div class="ph" data-shot="Photo: oral exam, amber detail"><span class="ph-dot" aria-hidden="true"></span></div>
+      <div class="ph" data-shot="your mouth is an ecosystem"><img src="images/coral.jpg" alt="Amber coral polyp in sharp focus against deep blue ocean, a living ecosystem" loading="lazy"><span class="ph-dot" aria-hidden="true"></span></div>
       <div>
         <p class="stat">The signal others skip</p>
         <h3>What your oral microbiome predicts</h3>
@@ -301,30 +371,45 @@
 
 <section class="visit" id="visit">
   <div class="wrap reveal">
-    <div class="visit-grid">
-      <div>
-        <p class="eyebrow">One visit</p>
-        <h2>Everything covered in under an hour.</h2>
-        <ul class="checks">
-          <li><b>Full blood panel</b> — drawn in ten minutes</li>
-          <li><b>Every mole mapped</b> — AI flags, clinician decides</li>
-          <li><b>Oral microbiome screen</b> — gums, saliva, oral cancer check</li>
-          <li><b>In-person consult</b> — same visit</li>
-          <li><b>The Sango Report</b> — three actions, never thirty</li>
-          <li><b>Referrals arranged</b> — if anything needs care</li>
-        </ul>
-        <a class="btn btn-amber" href="mailto:waitlist@sangohealth.co.uk?subject=Join%20the%20Sango%20waitlist&body=Hi%20Sango%2C%0A%0APlease%20add%20me%20to%20the%20waitlist.%0A%0AName%3A%0AIsland%20(Jersey%2FGuernsey)%3A%0APreferred%20check%20(Skin%20%2F%20Check%20%2F%20Check%20Plus%20%2F%20Annual)%3A">Join the waitlist</a>
-      </div>
-      <div class="ph" data-shot="Photo: clinician and patient, consult room"><span class="ph-dot" aria-hidden="true"></span></div>
-    </div>
+    <p class="eyebrow">One visit</p>
+    <h2>Everything covered in under an hour.</h2>
+    <ul class="chips">
+      <li><div class="chip-img"><img src="images/blood.jpg" alt="" loading="lazy"></div><div><b>Full blood panel</b><span>20+ measurements, drawn in ten minutes</span></div></li>
+      <li><div class="chip-img"><img src="images/skin.jpg" alt="" loading="lazy"></div><div><b>AI mole mapping</b><span>Every mole flagged by AI, decided by a clinician</span></div></li>
+      <li><div class="chip-img"><img src="images/coral.jpg" alt="" loading="lazy"></div><div><b>Oral microbiome screen</b><span>Gums, saliva and an oral cancer check</span></div></li>
+      <li><div class="chip-img"><img src="images/consult.jpg" alt="" loading="lazy"></div><div><b>In-person consult</b><span>Same visit, unhurried, in plain English</span></div></li>
+      <li><div class="chip-img"><img src="images/report.jpg" alt="" loading="lazy"></div><div><b>The Sango Report</b><span>Your Signal, three actions, referrals arranged</span></div></li>
+    </ul>
+    <a class="btn btn-amber" href="mailto:waitlist@sangohealth.com?subject=Join%20the%20Sango%20waitlist&body=Hi%20Sango%2C%0A%0APlease%20add%20me%20to%20the%20waitlist.%0A%0AName%3A%0AIsland%20(Jersey%2FGuernsey)%3A%0APreferred%20check%20(Skin%20%2F%20Check%20%2F%20Check%20Plus%20%2F%20Annual)%3A">Join the waitlist</a>
   </div>
 </section>
 
-<section class="tech" id="tech">
+<section class="tech" id="signal">
   <div class="wrap reveal" style="text-align:center">
-    <p class="eyebrow">How it works</p>
-    <h2 style="max-width:20ch;margin-left:auto;margin-right:auto">Technology finds. People explain.</h2>
-    <p class="lead" style="margin:0 auto;max-width:48ch">Certified medical-grade AI reads your skin and flags what matters. Accredited labs read your blood. Then a clinician — a person, in a room, unhurried — makes sense of all of it with you.</p>
+    <p class="eyebrow">Our method</p>
+    <h2 style="max-width:20ch;margin-left:auto;margin-right:auto">The Sango Signal.</h2>
+    <p class="lead" style="margin:0 auto;max-width:50ch">Most health checks read one thing and hand you a list of numbers. Sango reads your blood, skin and oral microbiome together — because the earliest warnings appear where systems overlap, and a change matters more than a snapshot.</p>
+    <div class="proof-grid" style="text-align:left;margin-top:38px">
+      <div class="pcard"><div class="n" style="font-size:1.15rem">Read together</div><p>Inflammation in your gums is checked against inflammation in your blood. One signal is noise; two agreeing is a message.</p></div>
+      <div class="pcard"><div class="n" style="font-size:1.15rem">Change detection</div><p>Your first visit builds a baseline — every mole, every marker. From then on, we read what moved. Trends warn years before thresholds do.</p></div>
+      <div class="pcard"><div class="n" style="font-size:1.15rem">Human final call</div><p>Certified medical-grade AI and accredited labs find; a clinician — in a room, unhurried — decides and explains.</p></div>
+    </div>
+    <div class="report-visual reveal"><img src="images/report.jpg" alt="Hands holding the Sango report by warm lamplight at an evening desk" loading="lazy"></div>
+  </div>
+</section>
+
+
+<!-- GALLERY -->
+<section class="gallery-sec">
+  <div class="wrap reveal">
+    <p class="eyebrow">The Sango experience</p>
+    <h2>A clinic that feels like the end of the day, not a hospital.</h2>
+    <div class="gallery">
+      <div class="gtile" data-label="arrive"><img src="images/reception.jpg" alt="Warm lamp-lit clinic reception at dusk with soft chairs" loading="lazy"></div>
+      <div class="gtile" data-label="settle"><img src="images/corridor.jpg" alt="Quiet clinic corridor in the evening with warm light from an open door" loading="lazy"></div>
+      <div class="gtile" data-label="the tools"><img src="images/scope.jpg" alt="Dermatoscope imaging device on a clean counter" loading="lazy"></div>
+      <div class="gtile" data-label="the talk"><img src="images/consult.jpg" alt="Clinician and patient in conversation in a warm consultation room" loading="lazy"></div>
+    </div>
   </div>
 </section>
 
@@ -412,6 +497,16 @@
       <p>We operate in Jersey and Guernsey. Our current appointment slots are full — email the waitlist and we'll hold your place, then contact you with dates as the next release opens. No payment is taken until you book a confirmed slot.</p>
     </details>
     <p class="more">Want the detail behind every test? <a href="what-we-test.html">Read what we test, and why</a>.</p>
+  </div>
+</section>
+
+
+<!-- MISSION -->
+<section class="mission">
+  <div class="wrap reveal">
+    <p class="eyebrow">Why Sango</p>
+    <h2>It starts with a signal.</h2>
+    <p>Sango means coral — the ocean's early-warning system, the first living thing to show when conditions change. We built Sango on the same idea: the body always signals first. In the blood, on the skin, in the mouth. Health starts with reading those signals early, while everything is still easy to change.</p>
   </div>
 </section>
 
