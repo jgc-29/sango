@@ -17,7 +17,7 @@
 <meta property="og:url" content="https://www.sangohealth.co.uk/">
 <meta property="og:site_name" content="Sango Health">
 <meta property="og:locale" content="en_GB">
-<meta property="og:image" content="https://www.sangohealth.co.uk/images/report.jpg">
+<meta property="og:image" content="https://www.sangohealth.co.uk/report.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
@@ -120,11 +120,11 @@
 
   .hero{background:
       linear-gradient(96deg, rgba(12,22,38,.97) 28%, rgba(12,22,38,.78) 55%, rgba(12,22,38,.38) 100%),
-      url('images/skin.jpg') right 20%/cover no-repeat, var(--night);
+      url('skin.jpg') right 20%/cover no-repeat, var(--night);
     color:#EAF0F8;min-height:88vh;display:flex;flex-direction:column;justify-content:center;padding:60px 0 0;overflow:hidden}
   @media(max-width:760px){.hero{background:
       linear-gradient(180deg, rgba(12,22,38,.92) 30%, rgba(12,22,38,.72)),
-      url('images/skin.jpg') center 15%/cover no-repeat, var(--night)}}
+      url('skin.jpg') center 15%/cover no-repeat, var(--night)}}
   .hero .eyebrow{color:var(--amber)}
   .hero h1{font-family:var(--disp);font-weight:600;font-size:clamp(2.7rem,8vw,4.8rem);letter-spacing:-.028em;line-height:1.04;max-width:14ch;margin-top:16px;text-wrap:balance}
   .hero h1 em{font-style:normal;color:var(--amber)}
@@ -224,7 +224,7 @@
   .ph:hover img{transform:scale(1.04)}
 
   /* stat band */
-  .numbers{background:linear-gradient(rgba(16,29,49,.88),rgba(12,22,38,.93)), url('images/sea.jpg') center/cover no-repeat;color:#EAF0F8;border-top:1px solid var(--line-dark);border-bottom:1px solid var(--line-dark)}
+  .numbers{background:linear-gradient(rgba(16,29,49,.88),rgba(12,22,38,.93)), url('sea.jpg') center/cover no-repeat;color:#EAF0F8;border-top:1px solid var(--line-dark);border-bottom:1px solid var(--line-dark)}
   .numbers .eyebrow{color:var(--amber)}
   .numbers h2{color:#EAF0F8}
   .num-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;margin-top:34px}
@@ -242,7 +242,7 @@
   .chips span{font-size:.87rem;color:#A9BAD2}
 
   /* mission full-bleed */
-  .mission{position:relative;background:url('images/coral.jpg') center/cover no-repeat;color:#EAF0F8;padding:150px 0}
+  .mission{position:relative;background:url('coral.jpg') center/cover no-repeat;color:#EAF0F8;padding:150px 0}
   .mission::before{content:"";position:absolute;inset:0;background:linear-gradient(92deg,rgba(12,22,38,.92) 20%,rgba(12,22,38,.55) 70%,rgba(12,22,38,.35))}
   .mission .wrap{position:relative}
   .mission .eyebrow{color:var(--amber)}
@@ -250,7 +250,7 @@
   .mission p{color:#C9D5E6;max-width:46ch;margin-top:14px;font-size:1.05rem}
 
   /* photo-backed final CTA */
-  .final{position:relative;background:url('images/consult.jpg') center 30%/cover no-repeat}
+  .final{position:relative;background:url('consult.jpg') center 30%/cover no-repeat}
   .final::before{content:"";position:absolute;inset:0;background:linear-gradient(178deg,rgba(20,36,59,.9),rgba(12,22,38,.94))}
   .final .wrap{position:relative}
 
@@ -269,6 +269,17 @@
   .report-visual img{width:100%;display:block;aspect-ratio:21/9;object-fit:cover}
   .report-visual::after{content:"the sango report · one document · three actions";position:absolute;left:16px;bottom:12px;font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:#fff;text-shadow:0 1px 8px rgba(12,22,38,.85)}
 
+
+  /* waitlist form */
+  .wl-form{max-width:460px;margin:0 auto;text-align:left;display:grid;gap:12px}
+  .wl-form label{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:#A3B5CD;display:block;margin-bottom:5px}
+  .wl-form input,.wl-form select{width:100%;background:rgba(12,22,38,.6);border:1px solid var(--line-dark);border-radius:10px;color:#EAF0F8;padding:13px 14px;font-family:var(--body);font-size:1rem}
+  .wl-form input::placeholder{color:#5F7290}
+  .wl-form input:focus,.wl-form select:focus{outline:2px solid var(--amber);outline-offset:1px;border-color:transparent}
+  .wl-form button{margin-top:6px;width:100%;border:none;cursor:pointer}
+  .wl-alt{margin-top:16px;font-size:.85rem;color:#8296B1}
+  .wl-alt a{color:var(--amber)}
+
 </style>
 </head>
 <body>
@@ -283,7 +294,7 @@
       <a href="what-we-test.html">What we test</a>
       <a href="#pricing">Pricing</a>
       <a href="#faq">Questions</a>
-      <a class="btn btn-amber" href="mailto:waitlist@sangohealth.co.uk?subject=Join%20the%20Sango%20waitlist&body=Hi%20Sango%2C%0A%0APlease%20add%20me%20to%20the%20waitlist.%0A%0AName%3A%0AIsland%20(Jersey%2FGuernsey)%3A%0APreferred%20check%20(Skin%20%2F%20Check%20%2F%20Check%20Plus%20%2F%20Annual)%3A">Join the waitlist</a>
+      <a class="btn btn-amber" href="#book">Join the waitlist</a>
     </div>
   </div>
 </nav>
@@ -296,7 +307,7 @@
     <h1>Catch health problems <em>early.</em></h1>
     <p class="sub">One appointment that reads your whole body — blood, organs, skin and the oral microbiome — explained in person by a clinician.</p>
     <div class="hero-ctas">
-      <a class="btn btn-amber" href="mailto:waitlist@sangohealth.co.uk?subject=Join%20the%20Sango%20waitlist&body=Hi%20Sango%2C%0A%0APlease%20add%20me%20to%20the%20waitlist.%0A%0AName%3A%0AIsland%20(Jersey%2FGuernsey)%3A%0APreferred%20check%20(Skin%20%2F%20Check%20%2F%20Check%20Plus%20%2F%20Annual)%3A">Join the waitlist</a>
+      <a class="btn btn-amber" href="#book">Join the waitlist</a>
       <a class="btn btn-ghost" href="#chapters">What we read</a>
     </div>
     <p class="hero-note">Jersey &amp; Guernsey · current slots full · waitlist open</p>
@@ -338,7 +349,7 @@
     </div>
 
     <div class="tabpane active" id="pane-blood" role="tabpanel" aria-labelledby="tab-blood">
-      <div class="ph" data-shot="one draw · twenty-plus measurements"><img src="images/blood.jpg" alt="Blood sample vial held under warm lamp light with dusk skyline behind" loading="lazy"><span class="ph-dot" aria-hidden="true"></span></div>
+      <div class="ph" data-shot="one draw · twenty-plus measurements"><img src="blood.jpg" alt="Blood sample vial held under warm lamp light with dusk skyline behind" loading="lazy"><span class="ph-dot" aria-hidden="true"></span></div>
       <div>
         <p class="stat">20+ measurements · one draw</p>
         <h3>What your blood remembers</h3>
@@ -348,7 +359,7 @@
     </div>
 
     <div class="tabpane" id="pane-skin" role="tabpanel" aria-labelledby="tab-skin" hidden>
-      <div class="ph" data-shot="ai flags · a clinician decides"><img src="images/skin.jpg" alt="Shoulder and back with natural moles highlighted by AI detection frames" loading="lazy"><span class="ph-dot" aria-hidden="true"></span></div>
+      <div class="ph" data-shot="ai flags · a clinician decides"><img src="skin.jpg" alt="Shoulder and back with natural moles highlighted by AI detection frames" loading="lazy"><span class="ph-dot" aria-hidden="true"></span></div>
       <div>
         <p class="stat">Every mole · mapped and tracked</p>
         <h3>What your skin shows</h3>
@@ -358,7 +369,7 @@
     </div>
 
     <div class="tabpane" id="pane-oral" role="tabpanel" aria-labelledby="tab-oral" hidden>
-      <div class="ph" data-shot="your mouth is an ecosystem"><img src="images/coral.jpg" alt="Amber coral polyp in sharp focus against deep blue ocean, a living ecosystem" loading="lazy"><span class="ph-dot" aria-hidden="true"></span></div>
+      <div class="ph" data-shot="your mouth is an ecosystem"><img src="coral.jpg" alt="Amber coral polyp in sharp focus against deep blue ocean, a living ecosystem" loading="lazy"><span class="ph-dot" aria-hidden="true"></span></div>
       <div>
         <p class="stat">The signal others skip</p>
         <h3>What your oral microbiome predicts</h3>
@@ -374,13 +385,13 @@
     <p class="eyebrow">One visit</p>
     <h2>Everything covered in under an hour.</h2>
     <ul class="chips">
-      <li><div class="chip-img"><img src="images/blood.jpg" alt="" loading="lazy"></div><div><b>Full blood panel</b><span>20+ measurements, drawn in ten minutes</span></div></li>
-      <li><div class="chip-img"><img src="images/skin.jpg" alt="" loading="lazy"></div><div><b>AI mole mapping</b><span>Every mole flagged by AI, decided by a clinician</span></div></li>
-      <li><div class="chip-img"><img src="images/coral.jpg" alt="" loading="lazy"></div><div><b>Oral microbiome screen</b><span>Gums, saliva and an oral cancer check</span></div></li>
-      <li><div class="chip-img"><img src="images/consult.jpg" alt="" loading="lazy"></div><div><b>In-person consult</b><span>Same visit, unhurried, in plain English</span></div></li>
-      <li><div class="chip-img"><img src="images/report.jpg" alt="" loading="lazy"></div><div><b>The Sango Report</b><span>Your Signal, three actions, referrals arranged</span></div></li>
+      <li><div class="chip-img"><img src="blood.jpg" alt="" loading="lazy"></div><div><b>Full blood panel</b><span>20+ measurements, drawn in ten minutes</span></div></li>
+      <li><div class="chip-img"><img src="skin.jpg" alt="" loading="lazy"></div><div><b>AI mole mapping</b><span>Every mole flagged by AI, decided by a clinician</span></div></li>
+      <li><div class="chip-img"><img src="coral.jpg" alt="" loading="lazy"></div><div><b>Oral microbiome screen</b><span>Gums, saliva and an oral cancer check</span></div></li>
+      <li><div class="chip-img"><img src="consult.jpg" alt="" loading="lazy"></div><div><b>In-person consult</b><span>Same visit, unhurried, in plain English</span></div></li>
+      <li><div class="chip-img"><img src="report.jpg" alt="" loading="lazy"></div><div><b>The Sango Report</b><span>Your Signal, three actions, referrals arranged</span></div></li>
     </ul>
-    <a class="btn btn-amber" href="mailto:waitlist@sangohealth.com?subject=Join%20the%20Sango%20waitlist&body=Hi%20Sango%2C%0A%0APlease%20add%20me%20to%20the%20waitlist.%0A%0AName%3A%0AIsland%20(Jersey%2FGuernsey)%3A%0APreferred%20check%20(Skin%20%2F%20Check%20%2F%20Check%20Plus%20%2F%20Annual)%3A">Join the waitlist</a>
+    <a class="btn btn-amber" href="#book">Join the waitlist</a>
   </div>
 </section>
 
@@ -394,7 +405,7 @@
       <div class="pcard"><div class="n" style="font-size:1.15rem">Change detection</div><p>Your first visit builds a baseline — every mole, every marker. From then on, we read what moved. Trends warn years before thresholds do.</p></div>
       <div class="pcard"><div class="n" style="font-size:1.15rem">Human final call</div><p>Certified medical-grade AI and accredited labs find; a clinician — in a room, unhurried — decides and explains.</p></div>
     </div>
-    <div class="report-visual reveal"><img src="images/report.jpg" alt="Hands holding the Sango report by warm lamplight at an evening desk" loading="lazy"></div>
+    <div class="report-visual reveal"><img src="report.jpg" alt="Hands holding the Sango report by warm lamplight at an evening desk" loading="lazy"></div>
   </div>
 </section>
 
@@ -405,10 +416,10 @@
     <p class="eyebrow">The Sango experience</p>
     <h2>A clinic that feels like the end of the day, not a hospital.</h2>
     <div class="gallery">
-      <div class="gtile" data-label="arrive"><img src="images/reception.jpg" alt="Warm lamp-lit clinic reception at dusk with soft chairs" loading="lazy"></div>
-      <div class="gtile" data-label="settle"><img src="images/corridor.jpg" alt="Quiet clinic corridor in the evening with warm light from an open door" loading="lazy"></div>
-      <div class="gtile" data-label="the tools"><img src="images/scope.jpg" alt="Dermatoscope imaging device on a clean counter" loading="lazy"></div>
-      <div class="gtile" data-label="the talk"><img src="images/consult.jpg" alt="Clinician and patient in conversation in a warm consultation room" loading="lazy"></div>
+      <div class="gtile" data-label="arrive"><img src="reception.jpg" alt="Warm lamp-lit clinic reception at dusk with soft chairs" loading="lazy"></div>
+      <div class="gtile" data-label="settle"><img src="corridor.jpg" alt="Quiet clinic corridor in the evening with warm light from an open door" loading="lazy"></div>
+      <div class="gtile" data-label="the tools"><img src="scope.jpg" alt="Dermatoscope imaging device on a clean counter" loading="lazy"></div>
+      <div class="gtile" data-label="the talk"><img src="consult.jpg" alt="Clinician and patient in conversation in a warm consultation room" loading="lazy"></div>
     </div>
   </div>
 </section>
@@ -423,26 +434,26 @@
         <div class="t-name">Skin</div>
         <div class="t-price">£120</div>
         <p class="t-line">Every mole mapped, reviewed by a clinician.</p>
-        <a class="btn btn-ghost-light" href="mailto:waitlist@sangohealth.co.uk?subject=Join%20the%20Sango%20waitlist&body=Hi%20Sango%2C%0A%0APlease%20add%20me%20to%20the%20waitlist.%0A%0AName%3A%0AIsland%20(Jersey%2FGuernsey)%3A%0APreferred%20check%20(Skin%20%2F%20Check%20%2F%20Check%20Plus%20%2F%20Annual)%3A">Join waitlist</a>
+        <a class="btn btn-ghost-light" href="#book">Join waitlist</a>
       </div>
       <div class="tier flagship">
         <div class="flag-tag">Most chosen</div>
         <div class="t-name">Check</div>
         <div class="t-price">£239</div>
         <p class="t-line">Blood, skin and oral microbiome. The complete hour.</p>
-        <a class="btn btn-amber" href="mailto:waitlist@sangohealth.co.uk?subject=Join%20the%20Sango%20waitlist&body=Hi%20Sango%2C%0A%0APlease%20add%20me%20to%20the%20waitlist.%0A%0AName%3A%0AIsland%20(Jersey%2FGuernsey)%3A%0APreferred%20check%20(Skin%20%2F%20Check%20%2F%20Check%20Plus%20%2F%20Annual)%3A">Join waitlist</a>
+        <a class="btn btn-amber" href="#book">Join waitlist</a>
       </div>
       <div class="tier">
         <div class="t-name">Check Plus</div>
         <div class="t-price">£349</div>
         <p class="t-line">Adds ApoB, Lp(a), insulin, hormones, ECG.</p>
-        <a class="btn btn-ghost-light" href="mailto:waitlist@sangohealth.co.uk?subject=Join%20the%20Sango%20waitlist&body=Hi%20Sango%2C%0A%0APlease%20add%20me%20to%20the%20waitlist.%0A%0AName%3A%0AIsland%20(Jersey%2FGuernsey)%3A%0APreferred%20check%20(Skin%20%2F%20Check%20%2F%20Check%20Plus%20%2F%20Annual)%3A">Join waitlist</a>
+        <a class="btn btn-ghost-light" href="#book">Join waitlist</a>
       </div>
       <div class="tier">
         <div class="t-name">Annual</div>
         <div class="t-price">£280<small>/yr</small></div>
         <p class="t-line">Yearly Check, mid-year skin re-map, trends.</p>
-        <a class="btn btn-ghost-light" href="mailto:waitlist@sangohealth.co.uk?subject=Join%20the%20Sango%20waitlist&body=Hi%20Sango%2C%0A%0APlease%20add%20me%20to%20the%20waitlist.%0A%0AName%3A%0AIsland%20(Jersey%2FGuernsey)%3A%0APreferred%20check%20(Skin%20%2F%20Check%20%2F%20Check%20Plus%20%2F%20Annual)%3A">Join waitlist</a>
+        <a class="btn btn-ghost-light" href="#book">Join waitlist</a>
       </div>
     </div>
     <p class="all-in">Anything we find comes with a referral and a next step — <a href="#faq">how it works</a>.</p>
@@ -514,8 +525,39 @@
   <div class="wrap reveal">
     <div class="mark" aria-hidden="true"></div>
     <h2>You've meant to do this for years.</h2>
-    <p class="sub">It takes one hour. Current slots are full — the waitlist holds your place.</p>
-    <a class="btn btn-amber" href="mailto:waitlist@sangohealth.co.uk?subject=Join%20the%20Sango%20waitlist&body=Hi%20Sango%2C%0A%0APlease%20add%20me%20to%20the%20waitlist.%0A%0AName%3A%0AIsland%20(Jersey%2FGuernsey)%3A%0APreferred%20check%20(Skin%20%2F%20Check%20%2F%20Check%20Plus%20%2F%20Annual)%3A">Join the waitlist</a>
+    <p class="sub">Current slots are full. Join the waitlist and we'll hold your place for the next release — no payment until you book.</p>
+    <form class="wl-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div>
+        <label for="wl-name">Name</label>
+        <input id="wl-name" type="text" name="name" placeholder="Your name" autocomplete="name" required>
+      </div>
+      <div>
+        <label for="wl-email">Email</label>
+        <input id="wl-email" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+      </div>
+      <div>
+        <label for="wl-island">Island</label>
+        <select id="wl-island" name="island" required>
+          <option value="" disabled selected>Choose your island</option>
+          <option>Jersey</option>
+          <option>Guernsey</option>
+        </select>
+      </div>
+      <div>
+        <label for="wl-interest">Interested in</label>
+        <select id="wl-interest" name="interest">
+          <option>Sango Check — £239</option>
+          <option>Sango Skin — £120</option>
+          <option>Sango Check Plus — £349</option>
+          <option>Sango Annual — £280/yr</option>
+          <option>Not sure yet</option>
+        </select>
+      </div>
+      <input type="hidden" name="_subject" value="New Sango waitlist signup">
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+      <button class="btn btn-amber" type="submit">Join the waitlist</button>
+    </form>
+    <p class="wl-alt">Prefer email? <a href="mailto:waitlist@sangohealth.co.uk">waitlist@sangohealth.co.uk</a></p>
   </div>
 </section>
 </main>
@@ -529,7 +571,7 @@
 
 <div class="sticky-cta" id="stickyCta" aria-hidden="true">
   <div class="sc-txt"><b>Sango Check — £239</b><br>Waitlist open · Jersey &amp; Guernsey</div>
-  <a class="btn btn-amber" href="mailto:waitlist@sangohealth.co.uk?subject=Join%20the%20Sango%20waitlist&body=Hi%20Sango%2C%0A%0APlease%20add%20me%20to%20the%20waitlist.%0A%0AName%3A%0AIsland%20(Jersey%2FGuernsey)%3A%0APreferred%20check%20(Skin%20%2F%20Check%20%2F%20Check%20Plus%20%2F%20Annual)%3A">Join waitlist</a>
+  <a class="btn btn-amber" href="#book">Join waitlist</a>
 </div>
 
 <script>
